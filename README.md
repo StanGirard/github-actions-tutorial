@@ -61,7 +61,7 @@ Create a `.github/workflows/workflow.yml` file in your repository for your
 GitHub Actions **workflow**. In the file, start with a name:
 
 ```yaml
-name: main-worklfow
+name: main-workflow
 ```
 
 Use the `on` field to trigger your workflow whenever a commit is pushed to the
@@ -121,7 +121,7 @@ Provide parameters to an action by filling in the `with` field:
 steps:
   # Check out the pull request's source code.
   - name: Check out source code
-    uses: actions/checkout@v2
+    uses: actions/checkout@v3
 
   # Install Go.
   - name: Set up Go
@@ -159,7 +159,7 @@ final step to run your application's unit tests:
 At this point, you should have the following code for your workflow:
 
 ```yaml
-name: main-worklfow
+name: main-workflow
 
 env: {}
 
@@ -432,7 +432,7 @@ deploy:
   steps:
     # Check out source code.
     - name: Check out source code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 ```
 
 Use `kubectl` to interact with the Kubernetes cluster. Add a step that downloads
